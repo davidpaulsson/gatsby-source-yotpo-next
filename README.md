@@ -15,8 +15,14 @@ or
 ```
 module.exports = {
   plugins: [
-    `gatsby-source-yotpo-next`
-  ],
+    {
+      resolve: 'gatsby-source-yotpo',
+      options: {
+        appKey: 'YOTPO_APP_KEY',
+        appSecret: 'YOTPO_SECRET_KEY',
+      },
+    }
+  ]
 }
 ```
 
