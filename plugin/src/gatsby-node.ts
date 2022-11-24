@@ -1,10 +1,14 @@
-"use strict";
 // https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.pluginOptionsSchema = void 0;
+
+import { GatsbyNode } from "gatsby";
+
 const { EMOJIS } = require("./constants");
+
 const validKeys = Object.keys(EMOJIS);
-const pluginOptionsSchema = ({ Joi }) => {
+
+export const pluginOptionsSchema: GatsbyNode["pluginOptionsSchema"] = ({
+  Joi,
+}) => {
   return Joi.object({
     message: Joi.string().default("Hello from the Plugin"),
     emoji: Joi.string()
@@ -13,4 +17,3 @@ const pluginOptionsSchema = ({ Joi }) => {
       .description(`Select between the emoji options`),
   });
 };
-exports.pluginOptionsSchema = pluginOptionsSchema;
