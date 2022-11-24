@@ -18,3 +18,5 @@ public/
 # README copied over when releasing
 plugin/README.md
 demo/.env
+demo/.env.development
+demo/.env.production

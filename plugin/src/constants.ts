@@ -1,5 +1,1 @@
-exports.EMOJIS = {
-  crown: "👑",
-  pirate: "🏴‍☠️",
-  princess: "👸",
-};
+export const YOTPO_NODE_TYPE_NAME = 'YotpoProductReview';
